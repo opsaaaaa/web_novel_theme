@@ -1,0 +1,66 @@
+title: Web Novel Theme!
+email: your-email@example.com
+description: >- 
+  a place to display your web novel
+tagline: >-
+  The home of your web novel
+baseurl: ""
+url: "example.com"
+
+twitter:
+  username: example
+  card: summary
+
+twitter_username: codekarmadev
+github_username: CodeKarmaDev
+
+theme: web_novel
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+  style: compressed
+
+collections:
+  tabs:
+    sort_by: order
+    output: true
+    permalink: /:name/
+
+defaults:  
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      show_sibling_nav: true
+  - scope:
+      path: ''
+      type: tabs
+    values:
+      layout: tab
+
+
+exclude:
+  - graphics
+  - .gitignore
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package-lock.json
+  - package.json
+  - web_novel.gemspec
+  - lib
+
