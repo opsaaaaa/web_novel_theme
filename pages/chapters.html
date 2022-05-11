@@ -32,9 +32,6 @@ pagination:
 
 <script src="https://cdn.rawgit.com/J911/jekyll-infinite-scroll/master/lib/InfiniteScroll.js"></script>
 <script>
-    // var scroller = new InfiniteScroll('/chapters/', 'reader');
-    // scroller.pNum = Int(document.getElementById('reader').getAttribute('data-page')) + 1;
-    // document.read
 
     window.onload = function(){
       new AnchorParagraph('#reader');
@@ -51,9 +48,9 @@ pagination:
         this.pNodes.forEach(function(p, inx){
           if(p.innerHTML.match('...')) {
             var a = document.createElement('a')
-            a.setAttribute('href', `#p${inx}`)
+            a.setAttribute('href', `#p${inx+1}`)
             a.setAttribute('class', `anchor`)
-            p.setAttribute('id', `p${inx}`)
+            p.setAttribute('id', `p${inx+1}`)
             a.innerHTML = String(inx+1)
             p.appendChild(a)
           } else {
