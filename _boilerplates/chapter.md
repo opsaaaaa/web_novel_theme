@@ -1,12 +1,15 @@
 ---
-_boilerplate:     # The config for your boilerplates:
-  path: chapters    # this is the folder path it will create your new post/page under. 
-
+_boilerplate:
+  path: '_chapters'
+  timestamp: false
+  title: title
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-permalink: {{ boilerplate.random_url=5 }}
+permalink: /chapters/{{ boilerplate.random_url }}.html
 layout: chapter
+chapter: {{ boilerplate.num }}
+public: false
 nav_exclude: false
 nav_order: 0
 ---

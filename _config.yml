@@ -4,7 +4,7 @@ description: >-
   a place to display your web novel
 tagline: >-
   The home of your web novel
-baseurl: ""
+baseurl: "/"
 url: "example.com"
 
 twitter:
@@ -14,7 +14,7 @@ twitter:
 twitter_username: codekarmadev
 github_username: CodeKarmaDev
 
-theme: web_novel
+theme: 'web_novel'
 
 plugins:
   - jekyll-feed
@@ -26,11 +26,14 @@ sass:
     - node_modules
   style: compressed
 
+novel:
+  title: "The Upper Crust"
+
 collections:
-  tabs:
-    sort_by: order
+  chapters:
+    sort_by: chapter
     output: true
-    permalink: /:name/
+    # permalink: /chapters/:num/
 
 defaults:  
   - scope:
@@ -45,6 +48,26 @@ defaults:
     values:
       layout: tab
 
+pagination:
+  collection: 'chapters'
+  per_page: 1
+  enabled: true
+  permalink: '/:num/' # Pages are index.html inside this folder (default)
+  #permalink: '/page/:num.html' # Pages are simple html files 
+  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+
+  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  title: ':title - page :num'
+
+  # Limit how many pagenated pages to create (default: 0, means all)
+  limit: 0
+  
+  sort_field: 'chapter'
+  # sort_reverse: true
+
+  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
+  # Without file extension
+  # indexpage: 'index'
 
 exclude:
   - graphics

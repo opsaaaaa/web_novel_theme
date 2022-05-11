@@ -9,7 +9,6 @@ public_folder: "/assets/uploads"
 site_url: https://webnovel.tinkerswan.com
 
 collections:
-
   - name: pages
     label: 'Pages'
     folder: 'pages/'

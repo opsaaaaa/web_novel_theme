@@ -1,0 +1,72 @@
+
+@import 'web_novel/colors'
+
+\:root
+    font-size: 16px
+
+html
+    scroll-behavior: smooth
+
+.reader
+    font-size: 1.4rem
+    p  
+        $paragraph-gap: .8rem
+        text-indent: 2rem
+        line-height: 1.4em
+        margin-top: $paragraph-gap
+        margin-bottom: $paragraph-gap
+        text-align: justify
+
+
+    .scene-change
+        margin-top: 1.2em
+        margin-bottom: 1.2em
+        font-size: 3rem
+
+.chapter__title
+    font-size: 4rem
+    line-height: .7em
+.chapter__header
+    margin-bottom: 1rem
+    margin-top: 2em
+.chapter__nav
+    .next
+        font-size: 2.8rem
+    .previous
+        font-size: 1.5rem
+
+.chapter__content
+    padding-bottom: 8rem
+  
+
+.anchor
+    color: var(--text-muted)
+    padding-left: 1rem
+    font-size: 1.8rem
+    offset-anchor: 10vh
+    
+.hbox
+    display: grid
+    grid-auto-flow: column
+    justify-content: space-between
+    align-items: baseline
+    column-gap: 2em
+
+@media only screen and (max-width: 40rem)
+
+    .chapter__title
+        grid-row: 1/2
+        grid-column: 1/3
+        margin-bottom: 0
+        a
+            display: block
+        // font-size: 3rem
+    .chapter__nav
+        grid-row: 2/3
+        grid-column: 2/3
+
+@media only screen and (max-width: 30rem)
+    .chapter__title
+        font-size: 3.5rem
+    .chapter__header
+        row-gap: 2rem

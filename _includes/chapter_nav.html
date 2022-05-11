@@ -1,0 +1,13 @@
+
+<div class="hbox chapter__nav">
+  {% if paginator.previous_page %}
+    <a
+    class="previous" 
+    href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Last</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a 
+    class="next" 
+    href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>
+  {% endif %}
+</div>

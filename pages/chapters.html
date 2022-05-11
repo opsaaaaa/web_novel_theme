@@ -1,0 +1,69 @@
+---
+title: Home
+layout: root
+permalink: chapters
+pagination: 
+  enabled: true
+---
+<h1>{{ site.novel.title }}</h1>
+
+
+<div data-page="{{ paginator.page }}" class="card--group reader" id="reader">
+{% for post in paginator.posts %}
+    <div class="hbox chapter__header">
+      <h2 class="chapter__title">
+        <a href="{{ "chapters/" | prepend: site.baseurl | append: paginator.page }}">
+          {{ paginator.page }}.
+        </a>
+        {{ post.title }}  
+      </h2>
+
+      {% include chapter_nav.html %}
+    </div>
+    <div class="chapter__content">
+      {{ post.content }}
+    </div>
+    <div class="div">
+      {% include chapter_nav.html %}
+    </div>  
+
+{% endfor %}
+</div>
+
+<script src="https://cdn.rawgit.com/J911/jekyll-infinite-scroll/master/lib/InfiniteScroll.js"></script>
+<script>
+    // var scroller = new InfiniteScroll('/chapters/', 'reader');
+    // scroller.pNum = Int(document.getElementById('reader').getAttribute('data-page')) + 1;
+    // document.read
+
+    window.onload = function(){
+      new AnchorParagraph('#reader');
+    };
+
+    class AnchorParagraph {
+      constructor (selector) {
+        this.pNodes = document.querySelectorAll(`${selector} p`)
+        this.start();
+        this.scrollToAnchor();
+      }
+
+      start() {
+        this.pNodes.forEach(function(p, inx){
+          if(p.innerHTML.match('...')) {
+            var a = document.createElement('a')
+            a.setAttribute('href', `#p${inx}`)
+            a.setAttribute('class', `anchor`)
+            p.setAttribute('id', `p${inx}`)
+            a.innerHTML = String(inx+1)
+            p.appendChild(a)
+          } else {
+            p.setAttribute('class', 'scene-change')
+          };
+        });
+      }
+
+      scrollToAnchor() {
+        document.querySelector(window.location.hash).scrollIntoView()
+      }
+    }
+</script>
