@@ -3,6 +3,7 @@ _boilerplate:
   path: '_chapters'
   timestamp: false
   title: title
+  slug: "{{ num }}-{{ title }}.md"
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
@@ -14,6 +15,8 @@ nav_exclude: false
 nav_order: 0
 ---
 
-content...
+### Chapter {{ page.chapter }}
+
+# {{ page.title }}
 
 
