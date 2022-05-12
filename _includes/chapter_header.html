@@ -1,8 +1,11 @@
 
-<header scroll-nav class="hbox nav">
+<header scroll-nav class="hbox hbox:long nav">
     <h1>
         <a href={{site.baseurl}}>
             {{ site.novel.title }}
         </a>
     </h1>
+
+    {% include chapter_nav.html %}
 </header>
+

@@ -2,8 +2,9 @@
 layout: root
 ---
 
+{% include chapter_header.html %}
+
 <div data-page="{{ page.chapter }}" class="reader" id="reader">
-  {% include chapter_nav.html %}
   <div class="chapter__content">
     {{ content }}
   </div>

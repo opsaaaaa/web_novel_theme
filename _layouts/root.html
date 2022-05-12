@@ -5,10 +5,24 @@
 </head>
 <body>
 
-  {% include header.html %}
-  
+ 
   {{content}}
    
   {% include footer.html %}
+
+  <script>
+  window.onscroll = function(e) { 
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollNav = document.querySelector('[scroll-nav]');
+
+    if(scrollY <= this.lastScroll) {
+      scrollNav.setAttribute('scroll-nav', 'up');
+    } else {
+      scrollNav.setAttribute('scroll-nav', 'down');
+    };
+
+    this.lastScroll = scrollY ;
+  }
+  </script>
 </body>
 </html>
