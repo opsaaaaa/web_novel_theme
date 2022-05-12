@@ -4,10 +4,6 @@ created: 2022-05-11 08:23:57 -0600
 # permalink: /chapters/CRB6g4WeR7NXJ9LvWbuAzg.html
 layout: chapter
 chapter: 03
-public: false
-nav_exclude: false
-nav_order: 0
-
 ---
 
 ### Chapter {{ page.chapter }}

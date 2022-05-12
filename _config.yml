@@ -19,6 +19,7 @@ theme: 'web_novel'
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-render-order
 
 sass:
   load_paths:
@@ -28,6 +29,24 @@ sass:
 
 novel:
   title: "The Upper Crust"
+  author: "John Doe"
+  copyright:
+    short: >-
+      **The Upper Crust, Vol 1**
+
+      
+
+      Copyright &copy; 2022 Example, JJI
+
+    warning: >-
+      PIRATING CONTENT IS ILLEGAL
+
+    long: 'COPYRIGHT.md'
+
+
+render_order:
+  - 'pages/copyright.md'
+  - '_chapters/*'
 
 collections:
   chapters:

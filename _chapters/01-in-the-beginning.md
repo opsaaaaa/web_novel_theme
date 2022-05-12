@@ -4,10 +4,7 @@ created: 2022-05-11 08:13:28 -0600
 # permalink: /chapters/Xyf4OdRZfQfQ50Sei_3iEA.html
 layout: chapter
 chapter: 01
-public: false
-permalink: chapters/1
-nav_exclude: false
-nav_order: 0
+permalink: chapters/01
 ---
 
 ### Chapter {{ page.chapter }}
