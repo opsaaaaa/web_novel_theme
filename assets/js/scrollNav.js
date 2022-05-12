@@ -19,4 +19,7 @@ class ScrollNav {
     });
   }
 }
-new ScrollNav();
+
+window.addEventListener('load', (e) => {
+  new ScrollNav();
+});

@@ -13,39 +13,4 @@ layout: root
   </div>  
 </div>
 
-<script>
-    window.addEventListener('load', (event) => {
-      new AnchorParagraph('#reader');
-    });
-
-    class AnchorParagraph {
-      constructor (selector) {
-        this.pNodes = document.querySelectorAll(`${selector} p`)
-        this.start();
-        this.scrollToAnchor();
-      }
-
-      start() {
-        this.pNodes.forEach(function(p, inx){
-          if(p.innerHTML.match('...')) {
-            var a = document.createElement('a')
-            a.setAttribute('href', `#p${inx+1}`)
-            a.setAttribute('class', `anchor`)
-            p.setAttribute('id', `p${inx+1}`)
-            a.innerHTML = String(inx+1)
-            p.appendChild(a)
-          } else {
-            p.setAttribute('class', 'scene-change')
-          };
-        });
-      }
-
-      scrollToAnchor() {
-        var hash = window.location.hash;
-        console.log(hash)
-        if(hash != '') {
-          document.querySelector(hash).scrollIntoView()
-        };
-      }
-    }
-</script>
+<script src="{{ '/assets/js/bookReader.js' | relative_url }}"></script>
