@@ -16,16 +16,7 @@ github_username: CodeKarmaDev
 
 theme: 'web_novel'
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-render-order
 
-sass:
-  load_paths:
-    - _sass
-    - node_modules
-  style: compressed
 
 novel:
   title: "The Upper Crust"
@@ -34,7 +25,7 @@ novel:
     short: >-
       **The Upper Crust, Vol 1**
 
-      
+      by **John Doe**
 
       Copyright &copy; 2022 Example, JJI
 
@@ -44,9 +35,6 @@ novel:
     long: 'COPYRIGHT.md'
 
 
-render_order:
-  - 'pages/copyright.md'
-  - '_chapters/*'
 
 collections:
   chapters:
@@ -54,39 +42,18 @@ collections:
     output: true
     # permalink: /chapters/:num/
 
-defaults:  
-  - scope:
-      path: ''
-      type: posts
-    values:
-      layout: post
-      show_sibling_nav: true
-  - scope:
-      path: ''
-      type: tabs
-    values:
-      layout: tab
 
-pagination:
-  collection: 'chapters'
-  per_page: 1
-  enabled: false
-  permalink: '/:num/' # Pages are index.html inside this folder (default)
-  #permalink: '/page/:num.html' # Pages are simple html files 
-  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
-  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
-  title: ':title - page :num'
 
-  # Limit how many pagenated pages to create (default: 0, means all)
-  limit: 0
-  
-  sort_field: 'chapter'
-  # sort_reverse: true
 
-  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
-  # Without file extension
-  # indexpage: 'index'
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+  style: compressed
 
 exclude:
   - graphics
