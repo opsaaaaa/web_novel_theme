@@ -10,19 +10,6 @@
    
   {% include footer.html %}
 
-  <script>
-  window.addEventListener('scroll', function(e) { 
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    var scrollNav = document.querySelector('[scroll-nav]');
-
-    if(scrollY <= this.lastScroll) {
-      scrollNav.setAttribute('scroll-nav', 'up');
-    } else {
-      scrollNav.setAttribute('scroll-nav', 'down');
-    };
-
-    this.lastScroll = scrollY ;
-  });
-  </script>
+  <script src="{{ '/assets/js/scrollNav.js' | relative_url }}"></script>
 </body>
 </html>

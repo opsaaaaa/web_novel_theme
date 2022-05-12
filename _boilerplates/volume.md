@@ -1,17 +1,14 @@
 ---
+# boilerplate volume vol=00 -T 'Title'
 _boilerplate:
-  path: '_preview'
+  path: '_volumes'
   timestamp: false
   title: title
-  slug: "{{ cht }}-{{ title }}.md"
-  vol: 01
+  slug: "{{ vol }}-{{ title }}.md"
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-permalink: /chapters/{{ boilerplate.random_url }}.html
-# permalink: /chapters/{{ boilerplate.cht }}
-layout: chapter
-chapter: {{ boilerplate.cht }}
+layout: volume
 volume: {{ boilerplate.vol }}
 public: false
 ---

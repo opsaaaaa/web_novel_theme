@@ -41,6 +41,12 @@ collections:
     sort_by: chapter
     output: true
     # permalink: /chapters/:num/
+  previews:
+    sort_by: chapter
+    output: true
+  volumes:
+    sort_by: volume
+    output: false
 
 
 plugins:

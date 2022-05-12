@@ -1,0 +1,22 @@
+
+<h1 id="#{{page.title | slugify }}">{{ page.title }}</h1> 
+
+{% assign volumes = site.chapters | group_by: 'volume' %}
+{% for vol in volumes %}
+
+{% assign volume = site.volumes | find: 'volume', vol.name %}
+## {{ volume.title }}, Volume {{ volume.volume }}
+
+<ol class="list-none">
+
+{% for cht in vol.items %}
+
+<li>{{ cht.chapter }}. 
+    <a href="{{ cht.url }}#{{ cht.title | slugify }}">
+        {{ cht.title }}
+    </a>
+</li>
+{% endfor %}
+</ol>
+
+{% endfor %}
