@@ -51,7 +51,7 @@ defaults:
 pagination:
   collection: 'chapters'
   per_page: 1
-  enabled: true
+  enabled: false
   permalink: '/:num/' # Pages are index.html inside this folder (default)
   #permalink: '/page/:num.html' # Pages are simple html files 
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.

@@ -1,0 +1,20 @@
+
+.chapter__nav
+    grid-template-columns: repeat(3, auto)
+    .next
+        font-size: 2.8rem
+        grid-column: 3/4
+    .previous
+        font-size: 1.5rem
+        grid-column: 1/2
+
+.chapter__content
+    padding-bottom: 8rem
+
+@media only screen and (min-width: 40rem)
+
+    .chapter__nav
+        .next
+            grid-column: 3/4
+        .previous
+            grid-column: 2/3
