@@ -8,7 +8,9 @@
 
     <div class="hbox nav">
         <a href="{{'chapters' | relative_url }}">Index</a>
+        {% if page.start_chapter %}
         {% assign cht1 = site.chapters | find: 'chapter', page.start_chapter %}
         <a class="big-link" href="{{ cht1.url }}#reader">Read</a>
+        {% endif %}
     </div>
 </header>

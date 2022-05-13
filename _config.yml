@@ -53,15 +53,17 @@ collections:
 
 defaults:
   - scope:
-      path: "chapters"
+      path: "_chapters/*"
     values:
       layout: "chapter"
+      type: 'chapters'
   - scope:
-      path: "preview"
+      path: "_previews/*"
     values:
       layout: "preview"
+      type: 'previews'
   - scope:
-      path: "pages"
+      path: "pages/*"
     values:
       layout: "page"
 
