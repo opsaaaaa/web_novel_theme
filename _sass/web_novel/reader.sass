@@ -1,7 +1,9 @@
 body
     // font-size: 1.4rem
-    font-size: 1.2rem
+    font-size: 1.4rem
     max-width: 45em
+h1, h2, h3, h4, h5, h6
+    line-height: 1.1em
 p  
     $paragraph-gap: .8rem
     margin-top: $paragraph-gap
@@ -16,8 +18,14 @@ p
 .reader
     max-width: 35em
     margin: 0 auto
+    padding-top: 2em
     text-align: justify
-    line-height: 1.4em
+    word-break: break-word
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+    line-height: 1.4em!important
     p  
         border-radius: 2em .2em
         text-indent: 2em
@@ -34,8 +42,6 @@ p
         font-size: 3rem
 
         
-    h1, h2, h3, h4, h5, h6
-        line-height: 1.1em
 
     h1
         font-weight: normal
@@ -66,5 +72,6 @@ p
     
 
 @media only screen and (min-width: 40rem)
-    body
-        font-size: 1.4rem
+    body, .reader
+        font-size: 1.6rem
+        line-height: 1.6em!important

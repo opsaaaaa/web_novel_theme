@@ -7,8 +7,8 @@
 </small>
 
 {% if warning %}
-    <small class="legal-warning" id="legal-warning">    
-        {{ warning | markdownify }}
-    </small>
+<small class="legal-warning" id="legal-warning">    
+    {{ warning | markdownify }}
+</small>
 {% endif %}
 

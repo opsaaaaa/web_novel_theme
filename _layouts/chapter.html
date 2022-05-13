@@ -4,13 +4,9 @@ layout: root
 
 {% include chapter_header.html %}
 
-<div data-page="{{ page.chapter }}" class="reader" id="reader">
-  <div class="chapter__content">
-    {{ content }}
-  </div>
-  <div class="div">
-    {% include chapter_nav.html %}
-  </div>  
-</div>
+{% include reader.html %}
 
-<script src="{{ '/assets/js/bookReader.js' | relative_url }}"></script>
+
+<div class="max-width-1">
+  {% include chapter_nav.html %}
+</div>

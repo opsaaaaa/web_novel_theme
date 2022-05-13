@@ -1,0 +1,15 @@
+<ol class="list-none">
+{% for cht in include.chapters %}
+
+<li>
+  <p>
+    {% unless cht.hide_num %}
+      <span>{{ cht.chapter }}.</span>
+    {% endunless %}
+    <a href="{{ cht.url }}#reader">
+      {{ cht.title }}
+    </a>
+  </p>
+</li>
+{% endfor %}
+</ol>

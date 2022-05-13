@@ -2,7 +2,7 @@
 title: In The End
 created: 2022-05-11 08:18:37 -0600
 # permalink: /chapters/77ldZRGZsoR0F-La7QCAJQ.html
-permalink: /chapters/02
+# permalink: /chapters/02
 layout: chapter
 chapter: 02
 volume: 01

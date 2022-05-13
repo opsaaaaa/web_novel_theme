@@ -21,6 +21,7 @@ theme: 'web_novel'
 novel:
   title: "The Upper Crust"
   author: "John Doe"
+  lang: en
   copyright:
     short: >-
       **The Upper Crust, Vol 1**
@@ -44,15 +45,29 @@ collections:
   previews:
     sort_by: chapter
     output: true
+    layout: chapter
   volumes:
     sort_by: volume
     output: false
 
 
+defaults:
+  - scope:
+      path: "chapters"
+    values:
+      layout: "chapter"
+  - scope:
+      path: "preview"
+    values:
+      layout: "preview"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
 
 
 sass:
@@ -60,6 +75,10 @@ sass:
     - _sass
     - node_modules
   style: compressed
+
+feed:
+  collections:
+    - chapters
 
 exclude:
   - graphics

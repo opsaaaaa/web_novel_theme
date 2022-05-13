@@ -1,14 +1,8 @@
----
-layout: root
----
 
 <div data-page="{{ page.chapter }}" class="reader" id="reader" lang="{{ site.novel.lang }}">
   <div class="chapter__content">
     {{ content }}
   </div>
-  <div class="div">
-    {% include chapter_nav.html %}
-  </div>  
 </div>
   
 <script src="{{ '/assets/js/bookReader.js' | relative_url }}"></script>

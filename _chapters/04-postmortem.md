@@ -1,7 +1,7 @@
 ---
 title: Postmortem
 created: 2022-05-11 23:51:44 -0600
-permalink: /chapters/d6VxL7jlVn8nDCFURTV3Rw.html
+# permalink: /chapters/04
 layout: chapter
 chapter: 04
 volume: 01

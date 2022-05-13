@@ -5,18 +5,8 @@
 {% for vol in volumes %}
 
 {% assign volume = site.volumes | find: 'volume', vol.name %}
-## {{ volume.title }}, Volume {{ volume.volume }}
+<h2>{{ volume.title }}, Volume {{ volume.volume }}</h2>
 
-<ol class="list-none">
-
-{% for cht in vol.items %}
-
-<li>{{ cht.chapter }}. 
-    <a href="{{ cht.url }}#{{ cht.title | slugify }}">
-        {{ cht.title }}
-    </a>
-</li>
-{% endfor %}
-</ol>
+{% include chapter_list.html chapters=vol.items %}
 
 {% endfor %}

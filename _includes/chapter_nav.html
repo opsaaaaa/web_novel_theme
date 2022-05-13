@@ -7,12 +7,12 @@
     {% assign hash = page.previous.title | slugify %}
     <a
     class="previous" 
-    href="{{ page.previous.url | append: '#' | append: hash }}">Last</a>
+    href="{{ page.previous.url }}#reader">Last</a>
   {% endif %}
   {% if page.next %}
     {% assign hash = page.next.title | slugify %}
     <a 
-    class="next" 
-    href="{{ page.next.url | append: '#' | append: hash }}">Next</a>
+    class="next big-link" 
+    href="{{ page.next.url }}#reader">Next</a>
   {% endif %}
 </div>
