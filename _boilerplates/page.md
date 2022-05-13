@@ -4,8 +4,8 @@ _boilerplate:
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-permalink: {{ boilerplate.random_url=5 }}
+permalink: {{ boilerplate.slug }}
 layout: default
 ---
 
-content...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

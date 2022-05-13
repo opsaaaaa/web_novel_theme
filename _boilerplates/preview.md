@@ -20,8 +20,10 @@ volume: {{ boilerplate.vol }}
 public: false
 ---
 
-### Chapter {{ page.chapter }}
+### Chapter {{ boilerplate.cht }}
 
-# {{ page.title }}
+# {{ boilerplate.title }}
+
+
 
 

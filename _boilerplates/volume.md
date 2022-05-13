@@ -13,8 +13,7 @@ volume: {{ boilerplate.vol }}
 public: false
 ---
 
-### Chapter {{ page.chapter }}
 
-# {{ page.title }}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 
