@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+STDOUT.sync = true
+
+gem_dir = File.expand_path("..",File.dirname(__FILE__))
+$LOAD_PATH.unshift gem_dir # Look in gem directory for resources first.
+
+require 'fileutils'
+
+class WebNovelInit
+
+    def initialize
+        cp_folder('_boilerplates')
+        cp_folder('_chapters')
+        cp_folder('_previews')
+        cp_folder('_volumes')
+        cp_folder('pages')
+        FileUtils.mkpath('_includes')
+        cp_file('_includes/copyright.md')
+        cp_file('_config.yml')
+    end
+    
+    def self.cp_folder(folder)
+        FileUtils.cp_r(File.join(__dir__,'../', folder), folder)
+    end
+
+    def cp_file(file)
+        FileUtils.cp(File.join(__dir__,'../', file), file)
+    end
+end
+
+WebNovelInit.new

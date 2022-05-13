@@ -4,8 +4,8 @@ _boilerplate:
   path: '_chapters'
   timestamp: false
   title: title
-  slug: "{{ cht }}-{{ title }}.md"
-  vol: 01
+  slug: "{{ vol }}-{{ cht }}-{{ title }}.md"
+  vol: '01'
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
