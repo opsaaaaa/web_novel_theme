@@ -57,7 +57,7 @@ Create your boilerplate pages with the `jekyll-page-boilerplate` gem.
     $ bplate chapter vol=01 cht=01 -T "My First Chapter"
     $ bplate preview vol=01 cht=02 -T "Secret Chapter for Proofreading"
 
-<!-- ## CMS Options= -->
+## CMS Options
 
 configuring a cms will require more setup on your end. 
 I use [netlifycms](https://www.netlifycms.org/) myself.
