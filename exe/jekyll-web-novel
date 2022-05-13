@@ -12,13 +12,12 @@ class WebNovelInit
     def initialize
         cp_folder('_boilerplates')
         cp_folder('pages')
+        cp_folder('admin')
         FileUtils.mkpath('_includes')
         FileUtils.mkpath('_chapters')
         FileUtils.mkpath('_previews')
         FileUtils.mkpath('_volumes')
-        FileUtils.mkpath('admin')
         cp_file('_includes/copyright.md')
-        cp_file('admin/config.yml')
         cp_file('_config.yml')
         puts ''
         puts 'Remember to remove `index.markdown`, `404.html`, `_posts`, and `about.md`'
