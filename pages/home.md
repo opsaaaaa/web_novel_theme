@@ -1,7 +1,7 @@
 ---
 title: Web Novel Theme for Jekyll
 permalink: /
-layout: page
+layout: home
 start_chapter: 1
 ---
 

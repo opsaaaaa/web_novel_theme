@@ -1,112 +1,57 @@
 # config.yml
+# Optional config for netlifyCMS
 
 backend:
   name: git-gateway
-  branch: netlify # Branch to update (optional; defaults to master)
+  branch: netlify
+  # ^ push changes to the netlify branch instead of master
+  # so I can review and merge the changes in before they go live.
 media_folder: 'assets/uploads'
 public_folder: "/assets/uploads"
 # publish_mode: editorial_workflow
-site_url: https://webnovel.tinkerswan.com
+# ^ Creates new a pull request for every new change 'published'
+site_url: https://example.com
 
 collections:
   - name: pages
     label: 'Pages'
     folder: 'pages/'
-    create: true
+    create: false
     slug: "{{slug}}"
-    summery: "{{title}} . {{month}}-{{year}}"
+    summery: "{{title}}"
     editor:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
-      
-      - label: 'Has Articles'
-        name: "has_children"
-        widget: 'boolean'
-        default: false
-      
+      - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-      
-      - label: 'Permalink'
-        name: "permalink"
-        widget: 'string'
-        default: '/:basename/'
-        required: false
 
-  - name: articles
-    label: 'Articles'
-    folder: 'articles/'
-    create: true
+  - name: chapters
+    label: 'Chapters'
+    folder: '_chapters/'
+    create: false
     slug: "{{slug}}"
-    summery: "{{title}} | {{field.parent}} . {{month}}-{{year}}"
+    summery: "{{field.volume}}.{{field.chapter}} {{title}}"
     editor:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
-      
-      - label: 'Parent'
-        name: "parent"
-        widget: 'relation'
-        required: true
-        collection: pages
-        value_field: title
-        search_fields: [title]
-      
+      - { label: 'Chapter', name: "chapter", widget: 'number', default: 01, value_type: 'int' }
+      - { label: 'Volume', name: "volume", widget: 'number', default: 01, value_type: 'int' }
+      - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-      
-      - label: 'Permalink'
-        name: "permalink"
-        widget: 'string'
-        default: 'Game Play'
-        required: false
 
-
-
-  - name: notes
-    label: 'Notes'
-    folder: 'notes/'
-    create: true
+  - name: previews
+    label: 'Previews'
+    folder: '_previews/'
+    create: false
     slug: "{{slug}}"
-    summery: "{{title}} . {{month}}-{{year}}"
+    summery: "{{field.volume}}.{{field.chapter}} {{title}} - preview"
     editor:
       preview: false
-    fields:
+    fields: 
       - { label: 'Title', name: "title", widget: 'string' }
+      - { label: 'Chapter', name: "chapter", widget: 'number', default: 01, value_type: 'int' }
+      - { label: 'Volume', name: "volume", widget: 'number', default: 01, value_type: 'int' }
+      - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-
-  - name: clippings
-    label: 'Clippings'
-    folder: '_clippings/'
-    create: true
-    summery: "{{title}} | {{field.clipping}} . {{month}}-{{year}}"
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Clipping', name: 'clipping', widget: 'string' }
-      - label: Notes
-        name: 'notes'
-        widget: 'list'
-        max: 5
-        min: 1
-        summary: '{{fields.note}}'
-        collapsed: true
-        default: 
-          - "note..."
-        field: {label: Note, name: note, widget: string}
-        allow_add: true
-      
-      - label: Tags
-        name: tags
-        widget: 'list'
-        max: 5
-        min: 1
-        default: 
-          - roll

@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| 
-    f.match(%r!^(assets|exe|pages|_layouts|_includes|_sass|_boilerplates|LICENSE|README|_config\.yml)!i) 
+    f.match(%r!^(assets|exe|pages|admin|_layouts|_includes|_sass|_boilerplates|LICENSE|README|_config\.yml)!i) 
   }
   
   spec.bindir        = "exe"

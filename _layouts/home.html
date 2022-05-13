@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="reader {{ page.title | slugify}}">
+    {{ content }}
+</div>
+
+{% if site.use_netlify_cms %}
+    <script src="{{ 'assets/js/forwardNetlifyIdentityToken.js' | relative_url }}"></script>
+{% endif %}

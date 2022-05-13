@@ -16,7 +16,7 @@ github_username: example
 
 theme: 'jekyll-web-novel'
 
-
+use_netlify_cms: false
 
 novel:
   title: "The Upper Crust"
