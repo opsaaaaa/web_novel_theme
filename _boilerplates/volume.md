@@ -8,9 +8,7 @@ _boilerplate:
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-layout: volume
 volume: {{ boilerplate.vol }}
-public: false
 ---
 
 

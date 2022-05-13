@@ -1,5 +1,4 @@
 ---
-# boilerplate chapter cht=00 -T 'Title'
 _boilerplate:
   path: '_chapters'
   timestamp: false
@@ -9,8 +8,8 @@ _boilerplate:
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-# permalink: /chapters/{{ boilerplate.random_url }}.html
-permalink: /chapters/{{ boilerplate.cht }}
+# permalink: /chapters/{{ boilerplate.random_url }}
+permalink: /chapters/{{ boilerplate.slug }}
 layout: chapter
 chapter: {{ boilerplate.cht }}
 volume: {{ boilerplate.vol }}

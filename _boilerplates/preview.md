@@ -3,21 +3,20 @@ _boilerplate:
   path: '_previews'
   timestamp: false
   title: title
-  slug: "{{ cht }}-{{ title }}.md"
+  slug: "{{ vol }}-{{ cht }}-{{ title }}.md"
   vol: '01'
-  localhost: http://localhost:4000
-  baseurl: https://example.com
+  localhost: 
+  baseurl: 
 
-# {{ boilerplate.localhost }}/chapters/{{ boilerplate.random_url }}.html#reader
-# {{ boilerplate.baseurl }}/chapters/{{ boilerplate.random_url }}.html#reader
+# http://localhost:4000/chapters/{{ boilerplate.random_url }}#reader
+# https://example.com/chapters/{{ boilerplate.random_url }}#reader
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-permalink: /chapters/{{ boilerplate.random_url }}.html
-# permalink: /chapters/{{ boilerplate.cht }}
+permalink: /chapters/{{ boilerplate.random_url }}
+# permalink: /chapters/{{ boilerplate.slug }}
 layout: chapter
 chapter: {{ boilerplate.cht }}
 volume: {{ boilerplate.vol }}
-public: false
 ---
 
 ### Chapter {{ boilerplate.cht }}

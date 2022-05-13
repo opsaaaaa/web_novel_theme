@@ -1,19 +1,38 @@
 # jekyll-web-novel
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+A [jekyll](https://jekyllrb.com/) website theme designed to host your work in progress novel.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+## Features
+- supper easy to read text formatting that looks great.
+- styles that respect you dark/light mode preferences.
+- hidden chapters called previews you can send to your proofreader.
+- generate boilerplates for chapters and volumes with one command.
+- Paragraph anchors for easy referencing.
+- Easy build script to get started quickly
+- UI that gets out of the way.
+- Mobile and desktop friendly interface
+- configurable copyright footer.
 
-
-
+### Todo (unimplemented)
+- Nice book cover display on the home page.
+- use said cover image in social cards.
+- pandoc scripts to generate ebook formats
+- nice comment implementation
+- optional config for online content management
+- Demo site 
+- optional copyright disclaimer popup
+- optional social/donation links
+- configurable nav to allow for more pages
+- about the author page
 
 ## Installation
 
+After creating a new jekyll project.
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
 gem "jekyll-web-novel"
-gem "jekyll-page-boilerplate"
+gem "jekyll-page-boilerplate" # for the awesome boilerplate's
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -26,32 +45,32 @@ And then execute:
 
     $ bundle
 
-Initialize the theme with, this will copy over the necessary files.
+Initialize and copy over the necessary files.
 
     $ jekyll-web-novel
 
+Delete the `index.markdown`, `404.html`, `about.markdown` files because they have conflicting paths.
 
+Create your boilerplate pages with the `jekyll-page-boilerplate` gem.
 
-## Usage
+    $ bplate volume vol=01 -T "Water"
+    $ bplate chapter vol=01 cht=01 -T "My First Chapter"
+    $ bplate preview vol=01 cht=02 -T "Secret Chapter for Proofreading"
 
-    $ bplate volume vol=01 -T 'The Jekyll Order'
-    $ bplate chapter cht=01 vol=01 -T 'Something Cool'
-    $ bplate preview cht=02 vol=02 -T 'Hidden Chapter for Proofreading'
+## CMS Options
+
+configuring a cms will require more setup on your end. 
+I use [netlifycms](https://www.netlifycms.org/) myself.
+The source code has an example configuration from a different project of mine under `admin/`.
+Jekyll has a list of [cms options](https://jekyllrb.com/resources/#content-management) on their website. 
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello.
 
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `web_novel.gemspec` accordingly.
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+[MIT License](https://opensource.org/licenses/MIT) for the time being but I have not really decided on a License yet.
 
