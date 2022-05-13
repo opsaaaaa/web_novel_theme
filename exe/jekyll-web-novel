@@ -20,7 +20,7 @@ class WebNovelInit
         cp_file('_config.yml')
     end
     
-    def self.cp_folder(folder)
+    def cp_folder(folder)
         FileUtils.cp_r(File.join(__dir__,'../', folder), folder)
     end
 

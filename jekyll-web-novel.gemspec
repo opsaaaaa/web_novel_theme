@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-web-novel"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.4"
   spec.authors       = ["opsaaaaa"]
   spec.email         = ["sean@ferney.org"]
 
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| 
-    f.match(%r!^(assets|pages|_layouts|_includes|_sass|_boilerplates|LICENSE|README|_config\.yml)!i) 
+    f.match(%r!^(assets|exe|pages|_layouts|_includes|_sass|_boilerplates|LICENSE|README|_config\.yml)!i) 
   }
   
   spec.bindir        = "exe"
