@@ -10,7 +10,12 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/opsaaaaa/web_novel_theme"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| 
+    f.match(%r!^(assets|pages|_layouts|_includes|_sass|_boilerplates|LICENSE|README|_config\.yml)!i) 
+  }
+  
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   spec.add_development_dependency "webrick", "~> 1.6", '>= 1.6.1'
   spec.add_development_dependency 'jekyll-page-boilerplate', '~> 4.2', '>= 4.2.1'

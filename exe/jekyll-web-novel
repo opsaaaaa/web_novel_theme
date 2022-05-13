@@ -11,11 +11,11 @@ class WebNovelInit
 
     def initialize
         cp_folder('_boilerplates')
-        cp_folder('_chapters')
-        cp_folder('_previews')
-        cp_folder('_volumes')
         cp_folder('pages')
         FileUtils.mkpath('_includes')
+        FileUtils.mkpath('_chapters')
+        FileUtils.mkpath('_previews')
+        FileUtils.mkpath('_volumes')
         cp_file('_includes/copyright.md')
         cp_file('_config.yml')
     end
