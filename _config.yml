@@ -11,10 +11,10 @@ twitter:
   username: example
   card: summary
 
-twitter_username: codekarmadev
-github_username: CodeKarmaDev
+twitter_username: example
+github_username: example
 
-theme: 'web_novel'
+theme: 'jekyll-web-novel'
 
 
 
@@ -41,7 +41,6 @@ collections:
   chapters:
     sort_by: chapter
     output: true
-    # permalink: /chapters/:num/
   previews:
     sort_by: chapter
     output: true
@@ -83,7 +82,6 @@ feed:
     - chapters
 
 exclude:
-  - graphics
   - .gitignore
   - .sass-cache/
   - .jekyll-cache/
@@ -97,6 +95,6 @@ exclude:
   - vendor/ruby/
   - package-lock.json
   - package.json
-  - web_novel.gemspec
+  - jekyll-web-novel.gemspec
   - lib
 

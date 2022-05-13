@@ -14,6 +14,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% assign cht1 = site.chapters | find: 'chapter', page.start_chapter %}
 [Read Now]({{ cht1.url | relative_url}}#reader){: .mega-link}
 
-
-
-ToDo. Find a way to put a cover image here

@@ -1,10 +1,10 @@
-# web_novel
+# jekyll-web-novel
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
 To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
-TODO: Delete this and the text above, and describe your gem
+
 
 
 ## Installation
@@ -12,26 +12,31 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "web_novel"
+gem "jekyll-web-novel"
+gem "jekyll-page-boilerplate"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: web_novel
+theme: jekyll-web-novel
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Initialize the theme with, this will copy over the necessary files.
 
-    $ gem install web_novel
+    $ jekyll-web-novel
+
+
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+    $ bplate volume vol=01 -T 'The Jekyll Order'
+    $ bplate chapter cht=01 vol=01 -T 'Something Cool'
+    $ bplate preview cht=02 vol=02 -T 'Hidden Chapter for Proofreading'
 
 ## Contributing
 
