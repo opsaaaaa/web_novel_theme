@@ -13,9 +13,9 @@ public_folder: "/assets/uploads"
 site_url: https://example.com
 
 collections:
-  - name: pages
+  - name: tabs
     label: 'Pages'
-    folder: 'pages/'
+    folder: '_tabs/'
     create: false
     slug: "{{slug}}"
     summery: "{{title}}"
@@ -23,6 +23,7 @@ collections:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true, required: false }
       - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -36,6 +37,7 @@ collections:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true, required: false }
       - { label: 'Chapter', name: "chapter", widget: 'number', default: 01, value_type: 'int' }
       - { label: 'Volume', name: "volume", widget: 'number', default: 01, value_type: 'int' }
       - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
@@ -51,6 +53,7 @@ collections:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: false, required: false }
       - { label: 'Chapter', name: "chapter", widget: 'number', default: 01, value_type: 'int' }
       - { label: 'Volume', name: "volume", widget: 'number', default: 01, value_type: 'int' }
       - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }

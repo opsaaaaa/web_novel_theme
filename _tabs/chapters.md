@@ -2,8 +2,8 @@
 title: Chapters
 layout: page
 permalink: chapters
-start_chapter: 1
+order: 1
 ---
 
-{% include toc.html %}
+{% include toc.html chapters=site.chapters %}
 

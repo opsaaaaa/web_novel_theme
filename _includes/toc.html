@@ -1,7 +1,7 @@
 
 <h1 id="#{{page.title | slugify }}">{{ page.title }}</h1> 
 
-{% assign volumes = site.chapters | group_by: 'volume' %}
+{% assign volumes = include.chapters | group_by: 'volume' %}
 {% for vol in volumes %}
 
 {% assign volume = site.volumes | find: 'volume', vol.name %}

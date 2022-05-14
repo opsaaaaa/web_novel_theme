@@ -1,16 +1,22 @@
 
 <header scroll-nav class="hbox nav hbox:long">
-    <h1>
-        <a href={{site.baseurl}}>
-            {{ site.title }}
-        </a>
-    </h1>
+  <h1>
+    <a href={{site.baseurl}}>
+      {{ site.title }}
+    </a>
+  </h1>
 
-    <div class="hbox nav">
-        <a href="{{'chapters' | relative_url }}">Index</a>
-        {% if page.start_chapter %}
-        {% assign cht1 = site.chapters | find: 'chapter', page.start_chapter %}
-        <a class="big-link" href="{{ cht1.url }}#reader">Read</a>
-        {% endif %}
-    </div>
+  <div class="hbox nav">
+
+    {% for tab in site.tabs %}
+      {% unless page.path == tab.path %}      
+        <a href="{{ tab.url }}">{{ tab.title }}</a>
+      {% endunless %}
+    {% endfor %}
+
+    {% if site.novel.start_chapter %}
+    {% assign cht1 = site.chapters | find: 'chapter', page.start_chapter %}
+      <a class="big-link" href="{{ cht1.url }}#reader">Read</a>
+    {% endif %}
+  </div>
 </header>

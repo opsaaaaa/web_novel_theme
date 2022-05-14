@@ -5,13 +5,10 @@
 @import 'web-novel/footer'
 @import 'web-novel/header'
 @import 'web-novel/scrollNav'
+@import 'web-novel/alerts'
 
 \:root
     font-size: 16px
-
-html
-    scroll-behavior: smooth
-
 
 .hbox
     display: grid
@@ -22,6 +19,9 @@ html
 
 .vbox > * + *
     margin-top: 2em
+
+.vbox > *
+    display: block
 
 h1 a
     color: var(--text-main)
@@ -42,7 +42,7 @@ h1 a
 
     margin: 1em 0
 
-.max-width-1
+.container
     max-width: 35em
     margin: 0 auto
 
@@ -54,6 +54,11 @@ h1 a
     line-height: 1em
     margin: 1em 0
 
+.mt
+    margin-top: 2em
+
+button
+    border: solid 2px var(--text-muted, #888)
 
 
 @media only screen and (max-width: 40rem)

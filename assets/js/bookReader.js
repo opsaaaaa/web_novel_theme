@@ -1,8 +1,9 @@
 class BookReader {
-  constructor (selector = '#reader', getCurrent = true) {
+  constructor (selector = '#reader', getCurrent = true, anchorTag = 'href') {
     this.pNodes = document.querySelectorAll(`${selector} p`);
     this.reader = document.querySelector(selector);
     this.pSelected = null;
+    this.anchorTag = anchorTag;
     this.anchorParagraphs();
     this.scrollToAnchor();
     if(getCurrent){
@@ -33,11 +34,12 @@ class BookReader {
 
   anchorParagraphs() {
     var c = 0;
+    var anchorTag = this.anchorTag;
     this.pNodes.forEach(function(p){
       if(p.innerHTML.match('...')) {
         c = c+1;
         var a = document.createElement('a')
-        a.setAttribute('href', `#p${c}`)
+        a.setAttribute(anchorTag, `#p${c}`)
         a.setAttribute('class', `anchor`)
         p.setAttribute('id', `p${c}`)
         a.innerHTML = String(c)
@@ -55,6 +57,7 @@ class BookReader {
     };
   }
 }
+
 window.addEventListener('load', (e) => {
-  new BookReader('#reader', true);
+  new BookReader('#reader', true, 'copy');
 });

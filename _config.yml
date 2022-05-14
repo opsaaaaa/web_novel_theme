@@ -22,6 +22,7 @@ novel:
   title: "The Upper Crust"
   author: "John Doe"
   lang: en
+  start_chapter: 1
   copyright:
     short: >-
       **The Upper Crust, Vol 1**
@@ -44,10 +45,12 @@ collections:
   previews:
     sort_by: chapter
     output: true
-    layout: chapter
   volumes:
     sort_by: volume
     output: false
+  tabs:
+    sort_by: order
+    output: true
 
 
 defaults:
@@ -61,10 +64,12 @@ defaults:
     values:
       layout: "preview"
       type: 'previews'
+      published: false
   - scope:
-      path: "pages/*"
+      path: "_tabs/*"
     values:
       layout: "page"
+      type: 'tabs'
 
 plugins:
   - jekyll-feed

@@ -4,10 +4,11 @@ title: Semi Hidden Chapter for Profreading
 created: 2022-05-12 18:15:19 -0600
 permalink: /chapters/fnHUs0dlIorLLUUGOwv9Ag.html
 # permalink: /chapters/05
+random: fnHUs0dlIorLLUUGOwv9Ag
 # layout: preview
 chapter: 05
 volume: 01
-public: false
+public: true
 ---
 
 ### Chapter {{ page.chapter }}
