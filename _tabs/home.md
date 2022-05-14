@@ -11,5 +11,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {: .big-text}
 
 
-{% assign cht1 = site.chapters | find: 'chapter', page.start_chapter %}
-[Read Now]({{ cht1.url | relative_url}}#reader){: .mega-link}
+{% assign cht1 = site.chapters | find: 'chapter', site.start_chapter %}
+<a href="{{ cht1.url | relative_url}}#reader" class="mega-link" go-to-bookmark>Read Now</a>

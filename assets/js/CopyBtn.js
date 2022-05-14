@@ -32,6 +32,8 @@ class CopyBtn {
   }
 }
 
+
+// TODO: figure out how to import this vv
 custom_alert_function = function(msg) {
   var sp = document.createElement('span');
   sp.innerHTML = msg;

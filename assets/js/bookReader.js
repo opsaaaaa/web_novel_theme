@@ -2,18 +2,24 @@ class BookReader {
   constructor (selector = '#reader', getCurrent = true, anchorTag = 'href') {
     this.pNodes = document.querySelectorAll(`${selector} p`);
     this.reader = document.querySelector(selector);
-    this.pSelected = null;
-    this.anchorTag = anchorTag;
-    this.anchorParagraphs();
-    this.scrollToAnchor();
-    if(getCurrent){
-      this.tackSelectedParagraph();
-    };
+    this.setBookMarkLink();
+    if(this.reader) {
+      this.pSelected = null;
+      this.anchorTag = anchorTag;
+      this.anchorParagraphs();
+      this.scrollToAnchor();
+      if(getCurrent){
+        this.tackSelectedParagraph();
+      };
+    }
   }
 
   tackSelectedParagraph() {
     this.pNodes.forEach((p, i) => {
-      p.addEventListener('click',(e) => this.setCurrent(p));
+      p.addEventListener('click',(e) => {
+        this.setCurrent(p)    
+        this.saveBookMark(p.getAttribute('id'))
+      });
       p.addEventListener('select',(e) => this.setCurrent(p));
     });
   }
@@ -56,7 +62,30 @@ class BookReader {
       document.querySelector(hash).scrollIntoView()
     };
   }
+
+  saveBookMark(id) {
+    var url = new URL(window.location);
+    url.hash = '#'+id;
+    window.localStorage.setItem('bookmark', url.href)
+    custom_alert_function('Saved Bookmark')
+  }
+
+  setBookMarkLink() {
+    var bm = window.localStorage.getItem('bookmark');
+    if(bm != undefined) {
+      document.querySelectorAll('[go-to-bookmark]').forEach((b)=>{
+        b.setAttribute('href', bm)
+      })
+    }
+  }
 }
+
+// TODO: figure out how to import this vv
+custom_alert_function = function(msg) {
+  var sp = document.createElement('span');
+  sp.innerHTML = msg;
+  document.querySelector('#alerts').appendChild(sp);
+};
 
 window.addEventListener('load', (e) => {
   new BookReader('#reader', true, 'copy');
