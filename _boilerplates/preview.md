@@ -3,7 +3,7 @@ _boilerplate:
   path: '_previews'
   timestamp: false
   title: title
-  slug: "{{ vol }}-{{ cht }}-{{ title }}.md"
+  slug: "{{ vol }}-{{ cht }}-{{ title }}"
   vol: '01'
 
 # http://localhost:4000/chapters/{{ boilerplate.random_url }}#reader

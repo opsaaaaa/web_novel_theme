@@ -3,7 +3,7 @@ _boilerplate:
   path: '_chapters'
   timestamp: false
   title: title
-  slug: "{{ vol }}-{{ cht }}-{{ title }}.md"
+  slug: "{{ vol }}-{{ cht }}-{{ title }}"
   vol: '01'
 
 title: {{ boilerplate.title }}

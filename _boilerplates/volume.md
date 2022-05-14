@@ -4,7 +4,7 @@ _boilerplate:
   path: '_volumes'
   timestamp: false
   title: title
-  slug: "{{ vol }}-{{ title }}.md"
+  slug: "{{ vol }}-{{ title }}"
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}

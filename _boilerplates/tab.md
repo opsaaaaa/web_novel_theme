@@ -1,7 +1,7 @@
 ---
 _boilerplate:
   path: _tabs
-  order: '0'
+  order: 0
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
