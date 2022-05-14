@@ -5,8 +5,6 @@ _boilerplate:
   title: title
   slug: "{{ vol }}-{{ cht }}-{{ title }}.md"
   vol: '01'
-  localhost: 
-  baseurl: 
 
 # http://localhost:4000/chapters/{{ boilerplate.random_url }}#reader
 # https://example.com/chapters/{{ boilerplate.random_url }}#reader

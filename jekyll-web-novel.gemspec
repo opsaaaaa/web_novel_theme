@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   spec.add_development_dependency "webrick", "~> 1.6", '>= 1.6.1'
-  spec.add_development_dependency 'jekyll-page-boilerplate', '~> 4.2', '>= 4.2.1'
+  spec.add_development_dependency 'jekyll-page-boilerplate', '~> 4.3', '>= 4.3.0'
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"  
   spec.add_runtime_dependency "jekyll-seo-tag", '~> 2.8'  
