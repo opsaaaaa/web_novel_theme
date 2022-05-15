@@ -44,7 +44,7 @@ class BookReader {
       if(p.innerHTML.match('...')) {
         c = c+1;
         var a = document.createElement('a');
-        a.addEventListener('click',(e)=>{BookReader.saveBookMark(c)});
+        a.addEventListener('click',(e)=>{BookReader.saveBookMark(p)});
         a.setAttribute(anchorTag, `#p${c}`)
         a.setAttribute('class', `anchor`)
         p.setAttribute('id', `p${c}`)
@@ -63,16 +63,18 @@ class BookReader {
     };
   }
 
-  static saveBookMark(id) {
+  static saveBookMark(p) {
     var url = new URL(window.location);
-    url.hash = '#p'+String(id);
+    url.hash = '#'+p.getAttribute('id');
     window.localStorage.setItem('bookmark', url.href)
     custom_alert_function('Saved Bookmark')
+    console.log(window.localStorage.getItem('bookmark'));
   }
 
   setBookMarkLink() {
-    var bm = new URL(window.localStorage.getItem('bookmark'));
+    var bm = window.localStorage.getItem('bookmark');
     if(bm != undefined) {
+      bm = new URL(bm);
       document.querySelectorAll('[go-to-bookmark]').forEach((b)=>{
         b.setAttribute('href', bm.href)
         b.setAttribute('title', 'Bookmark: '+bm.pathname+bm.hash)
