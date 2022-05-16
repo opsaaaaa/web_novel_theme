@@ -8,9 +8,6 @@ _boilerplate:
 
 title: {{ boilerplate.title }}
 created: {{ boilerplate.time }}
-# permalink: /chapters/{{ boilerplate.random_url }}
-permalink: /chapters/{{ boilerplate.slug }}
-layout: chapter
 chapter: {{ boilerplate.cht }}
 volume: {{ boilerplate.vol }}
 ---

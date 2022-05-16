@@ -4,11 +4,6 @@ layout: root
 
 {% include header.html %}
 
-<div class="container mt">
-    
-    <button copy="{{ page.url | prepend: site.url }}">
-        Copy URL
-    </button>
-</div>
+{% include share_link.html %}
 
 {% include reader.html %}

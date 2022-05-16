@@ -1,0 +1,20 @@
+
+{% if page.published %}
+{% if page.share_link != false %}
+
+
+  {% assign share = page.share_link %}
+  {% unless share %}
+    {% assign share = page.url | | prepend: site.url %}
+  {% endunless %}
+  {% assign share = share | append: '#reader' %}
+
+  <div class="container mt hbox">
+    <div class="div"></div>
+    <button copy="{{ share }}" title="{{ share }}">
+      Share Link
+    </button>
+  </div>
+
+{% endif %}
+{% endif %}

@@ -6,6 +6,7 @@ layout: chapter
 chapter: 00.2
 hide_num: true
 volume: 01
+share_link: false
 ---
 
 
