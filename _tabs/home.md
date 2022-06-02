@@ -3,6 +3,7 @@ title: Home
 permalink: /
 layout: home
 order: 0
+featured_volume:
 ---
 
 # {{ site.novel.title }}

@@ -42,20 +42,26 @@ collections:
   chapters:
     sort_by: chapter
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:path/
   previews:
     sort_by: chapter
     output: true
     permalink: /chapters/:name
   volumes:
     sort_by: volume
-    output: false
+    output: true
   tabs:
     sort_by: order
     output: true
 
 
 defaults:
+  - scope:
+      path: "_volumes/*"
+    values:
+      layout: "volume"
+      type: 'volumes'
+      published: true
   - scope:
       path: "_chapters/*"
     values:
