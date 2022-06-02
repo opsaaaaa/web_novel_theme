@@ -5,3 +5,6 @@
 _site
 Gemfile.lock
 tmp/*
+*.tmp
+node_modules/*
+
