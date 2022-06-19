@@ -41,7 +41,7 @@ class BookReader {
     var c = 0;
     var anchorTag = this.anchorTag;
     this.pNodes.forEach(function(p){
-      if(p.innerHTML.match('...')) {
+      if(p.innerHTML.match(/\s\w+\s/)) {
         c = c+1;
         var a = document.createElement('a');
         a.addEventListener('click',(e)=>{BookReader.saveBookMark(p)});
@@ -50,7 +50,7 @@ class BookReader {
         p.setAttribute('id', `p${c}`)
         a.innerHTML = String(c)
         p.appendChild(a)
-      } else {
+      } else if(p.innerHTML.match(/^(…|...)\s*$/)) {
         p.setAttribute('class', 'scene-change')
       };
     });
