@@ -15,8 +15,8 @@
     {% endfor %}
 
     {% if site.novel.start_chapter %}
-    {% assign cht1 = site.chapters | find: 'chapter', page.start_chapter %}
-      <a go-to-bookmark class="big-link" href="{{ cht1.url }}#reader">Read</a>
+      {% assign cht1 = site.chapters | find: 'chapter', site.novel.start_chapter %}
+      <a class="big-link" href="{{ cht1.url }}#reader">Read</a>
     {% endif %}
   </div>
 </header>

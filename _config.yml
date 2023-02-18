@@ -43,10 +43,6 @@ collections:
     sort_by: chapter
     output: true
     permalink: /:collection/:path/
-  previews:
-    sort_by: chapter
-    output: true
-    permalink: /chapters/:name
   volumes:
     sort_by: volume
     output: true
@@ -68,12 +64,6 @@ defaults:
       layout: "chapter"
       type: 'chapters'
       published: true
-  - scope:
-      path: "_previews/*"
-    values:
-      layout: "preview"
-      type: 'previews'
-      published: false
   - scope:
       path: "_tabs/*"
     values:

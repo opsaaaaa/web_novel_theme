@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-web-novel"
-  spec.version       = "0.2.3"
+  spec.version       = "0.3.0"
   spec.authors       = ["opsaaaaa"]
   spec.email         = ["sean@ferney.org"]
 
@@ -18,10 +18,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   spec.add_development_dependency "webrick", "~> 1.6", '>= 1.6.1'
-  spec.add_development_dependency 'jekyll-page-boilerplate', '~> 4.3', '>= 4.3.0'
+  spec.add_development_dependency 'jekyll-page-boilerplate', '~> 5.0', '>= 5.0.0'
 
-  spec.add_runtime_dependency "jekyll", "~> 4.2"  
-  spec.add_runtime_dependency "jekyll-seo-tag", '~> 2.8'  
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.16"
+  spec.add_runtime_dependency "jekyll", ">= 4.2"
+  spec.add_runtime_dependency "jekyll-seo-tag", '>= 2.8'
+  spec.add_runtime_dependency "jekyll-feed", ">= 0.16"
 
 end
