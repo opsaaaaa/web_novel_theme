@@ -5,7 +5,6 @@ A [jekyll](https://jekyllrb.com/) website theme designed to host your work in pr
 ## Features
 - supper easy to read text formatting that looks great.
 - styles that respect your dark/light mode preferences.
-- hidden chapters called previews you can send to your proofreader.
 - generate boilerplates for chapters and volumes with one command.
 - Paragraph anchors for easy referencing.
 - Easy build script to get started quickly
@@ -59,7 +58,6 @@ Create your boilerplate pages with the `jekyll-page-boilerplate` gem.
 
     $ bplate volume vol=01 -T "Water"
     $ bplate chapter vol=01 cht=01 -T "My First Chapter"
-    $ bplate preview vol=01 cht=02 -T "Secret Chapter for Proofreading"
 
 ## CMS Options
 
@@ -82,7 +80,7 @@ and invite yourself and a user.
 I also invited my proofreader/editor.
 
 Going to `you.site/admin` should ask you to login with netlify.
-Once done you should find a side bar with collections `pages, chapters, previews`.
+Once done you should find a side bar with collections `pages, chapters, drafts`.
 
 
 ## Contributing

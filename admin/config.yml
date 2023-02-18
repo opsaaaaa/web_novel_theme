@@ -43,12 +43,12 @@ collections:
       - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: previews
-    label: 'Previews'
-    folder: '_previews/'
+  - name: drafts
+    label: 'Drafts'
+    folder: '_drafts/'
     create: false
     slug: "{{slug}}"
-    summery: "{{field.volume}}.{{field.chapter}} {{title}} - preview"
+    summery: "{{field.volume}}.{{field.chapter}} {{title}} - draft"
     editor:
       preview: false
     fields: 
