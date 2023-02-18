@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-web-novel"
-  spec.version       = "0.3.1"
+  spec.version       = "0.3.2"
   spec.authors       = ["opsaaaaa"]
   spec.email         = ["sean@ferney.org"]
 
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'jekyll-page-boilerplate', '~> 5.0', '>= 5.0.0'
 
   spec.add_runtime_dependency "jekyll", "~> 4.3"
-  spec.add_runtime_dependency "jekyll-seo-tag", '>= 2.8'
-  spec.add_runtime_dependency "jekyll-feed", ">= 0.16"
+  spec.add_runtime_dependency "jekyll-seo-tag", '~> 2.8'
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
 
 end
