@@ -4,8 +4,7 @@
 {% assign volumes = include.chapters | group_by: 'volume' %}
 {% for vol in volumes %}
 
-{% assign volume = site.volumes | find: 'volume', vol.name %}
-<h2>{{ volume.title }}, Volume {{ volume.volume }}</h2>
+<h2>{{ vol.name }}</h2>
 
 {% include chapter_list.html chapters=vol.items %}
 

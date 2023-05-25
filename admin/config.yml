@@ -39,7 +39,7 @@ collections:
       - { label: 'Title', name: "title", widget: 'string' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true, required: false }
       - { label: 'Chapter', name: "chapter", widget: 'number', default: 01, value_type: 'int' }
-      - { label: 'Volume', name: "volume", widget: 'number', default: 01, value_type: 'int' }
+      - { label: 'Volume', name: "volume", widget: 'string' }
       - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -55,6 +55,6 @@ collections:
       - { label: 'Title', name: "title", widget: 'string' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: false, required: false }
       - { label: 'Chapter', name: "chapter", widget: 'number', default: 01, value_type: 'int' }
-      - { label: 'Volume', name: "volume", widget: 'number', default: 01, value_type: 'int' }
+      - { label: 'Volume', name: "volume", widget: 'string' }
       - { label: 'Permalink', name: "permalink", widget: 'string', default: '/:basename/', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }

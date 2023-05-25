@@ -15,14 +15,12 @@ class WebNovelInit
         cp_folder('admin')
         FileUtils.mkpath('_includes')
         FileUtils.mkpath('_chapters')
-        FileUtils.mkpath('_volumes')
         cp_file('_includes/copyright.md')
         cp_file('_config.yml')
         puts ''
         puts 'Remember to remove `index.markdown`, `404.html`, `_posts`, and `about.md`'
         puts ''
         puts 'You can use the _boilerplates provided with the `jekyll-page-boilerplate` gem.'
-        puts '`$ bplate volume vol=01 -T "Water"`'
         puts '`$ bplate chapter vol=01 cht=01 -T "My First Chapter"`'
         puts ''
         puts 'Web Novel jekyll template files created.'

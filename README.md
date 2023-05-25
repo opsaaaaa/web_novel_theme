@@ -5,7 +5,7 @@ A [jekyll](https://jekyllrb.com/) website theme designed to host your work in pr
 ## Features
 - supper easy to read text formatting that looks great.
 - styles that respect your dark/light mode preferences.
-- generate boilerplates for chapters and volumes with one command.
+- generate boilerplates for chapters with one command.
 - Paragraph anchors for easy referencing.
 - Easy build script to get started quickly
 - UI that gets out of the way.
@@ -56,7 +56,6 @@ because they have conflicting paths or are just unneeded.
 
 Create your boilerplate pages with the `jekyll-page-boilerplate` gem.
 
-    $ bplate volume vol=01 -T "Water"
     $ bplate chapter vol=01 cht=01 -T "My First Chapter"
 
 ## CMS Options

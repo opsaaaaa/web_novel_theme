@@ -43,21 +43,12 @@ collections:
     sort_by: chapter
     output: true
     permalink: /:collection/:path/
-  volumes:
-    sort_by: volume
-    output: true
   tabs:
     sort_by: order
     output: true
 
 
 defaults:
-  - scope:
-      path: "_volumes/*"
-    values:
-      layout: "volume"
-      type: 'volumes'
-      published: true
   - scope:
       path: "_chapters/*"
     values:
