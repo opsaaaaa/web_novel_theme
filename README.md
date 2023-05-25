@@ -75,8 +75,7 @@ Then I like to add Github as and external login provider.
 You will need to enable `Git Gateway` as well.
 
 Find the identify tab at the top of their site, 
-and invite yourself and a user.
-I also invited my proofreader/editor.
+and invite yourself and a user. Its may also be useful to invited your proofreader/editor.
 
 Going to `you.site/admin` should ask you to login with netlify.
 Once done you should find a side bar with collections `pages, chapters, drafts`.
